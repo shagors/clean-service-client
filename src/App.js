@@ -4,6 +4,7 @@ import { PublicRoute } from "./routes/PublicRoutes";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import Services from "./pages/Services";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           {
             PublicRoute.map(({ path, Component }, index) => (<Route key={index} path={path} element={<Component />}></Route>))
           }
+          <Route path="/services" element={<Services></Services>}></Route>
         </Routes>
       </Navbar>
   );
